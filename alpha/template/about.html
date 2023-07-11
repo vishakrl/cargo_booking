@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Our School</title>
+<style>
+
+body {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: rgb(0, 0, 0);
+  background-color: #55c4f3;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+
+</style>
+</head>
+<body>
+    <div class="about-section">
+        <h1><i>About Us</i></h1>
+        <p><i>ALPHA, Your Partner in Global Freight Forwarding.</i><br><br><i>“ALPHA  is a specialized cargo freight forwarding company that provides customized, end-to-end logistics solutions for businesses worldwide. We are your ‘architect’ of freight transportation by sea, land, and air..”
+
+           <br>— vishak</i> </p>
+        <p></p>
+      </div>
+      
+      <h2 style="text-align:center">Our Board</h2>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <img src="{% static 'images/vecteezy_profile-icon-design-vector_5544718.jpg' %}" alt="AK" style="width:100%; background-size: cover;">
+            <div class="container">
+              <h2><i>Mr.VISHAK R L</i></h2>
+              <p class="title">MD & Founder</p>
+              <p><i>The charge of company's operations to make sure it achieves its objectives effectively and efficiently</i></p>
+              <p><i>vishakalpha@gmail.com</i></p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="{% static 'images/vecteezy_profile-icon-design-vector_5544718.jpg' %}" alt="vishak" style="width:100%; background-size: cover;">
+            <div class="container">
+              <h2><i>Mr.AKHIL KRISHNAN</i> </h2>
+              <p class="title">Chief Executive Office</p>
+              <p><i>Ensure the sustainability,profitability and development build and lead a strong team </i></p>
+              <p><i>akhilalpha@.com</i></p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="{% static 'images/vecteezy_profile-icon-design-vector_5544718.jpg' %}" alt="priya" style="width:100%; background-size: cover;">
+            <div class="container">
+              <h2><i>Ms.SUHANA</i></h2>
+              <p class="title">Representative Staff</p>
+              <p><i>Including meeting with existing clients to provide customer service or seeking out new clients</i></p>
+              <p><i>suhanaalph@gmai.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+        
+
+      </div>
+    
+</body>
+</html>

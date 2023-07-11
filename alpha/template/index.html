@@ -1,0 +1,254 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css\index.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/d1e05f2205.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="top">
+            <div class="head-bar">
+                
+                <a href="about/">About us</a>
+                {% if user.is_staff %}
+                <a href="order/">Over View</a>
+                <a href="logout/">Logout</a>
+                <a href=""></a>
+                <a href="">{{user.username}}</a>
+
+
+                {% elif user.is_authenticated %}
+                <a href="book/">Book Cargo</a>
+                <a href="bookview/">View Booking</a>
+                <a href="logout/">Logout</a>
+                <a href="">{{user.username}}</a>
+
+                {% else %}
+                <a href="log/">Login</a>
+                <a href="reg/">Register</a>
+
+                {% endif %}
+            </div>
+            <div class="top-body" style="background-image: url('/static/images/ship32.jpg');">
+                <center>
+                    <div class="top-mid">
+                        <h1><i>ALPHA INTERNATIONAL</i</h1>
+                        <H3><i>Your trustworthy Cargo Forwarder</i></H3>
+                        <!-- <p > hjgkhkhkhhn Secondary education helps children to prepare themselves for their future choices of going to either college or university. -->
+                        <!-- It encourages knowledge and information sharing</p >  -->
+                        <!-- <button >CONTACT US</button> -->
+                    </div>
+                </center>
+
+
+            </div>
+        </div>
+        <div class="mid">
+            <center>
+
+                <h1>OUR SERVICES</h1>
+            </center>
+            <div class="inner-mid">
+                <div class="pro-mid1">
+                    <img src="{% static 'images/ship7.jpg' %}" alt="">
+                    <i class="fa-solid fa-plane-departure"></i>
+                    <h3>AIR FREIGHT</h3>
+                    <p>ALPHA provides air-freight forwarding solutions in collaboration with Slade Air Netherlands.
+                        From location to the final destination of the consignee, we ensure your shipment is delivered on
+                        time.</p>
+
+                </div>
+                <div class="pro-mid2">
+                    <img src="{% static 'images/ship8.jpg' %}" alt="">
+                    <i class="fa-solid fa-truck"></i>
+                    <h3>RO/RO SHIPPING</h3>
+                    <p>Cargo Shipping International is a reliable partner for Ro/Ro shipments to the east, west, and
+                        south of Africa,
+                        the Middle and the Far East, and Central and South America.
+
+                    </p>
+                </div>
+                <div class="pro-mid3">
+                    <img src="{% static 'images/ship1.jpg' %}" alt="">
+                    <i class="fa-solid fa-ship"></i>
+                    <h3>OCEAN FREIGHT</h3>
+                    <p>We specialize in various sea freight solutions, considering the individual wishes of our
+                        customers.
+                        We tailor our solutions around your unique requirements to deliver your cargo to any global
+                        address</p>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="about">
+            
+              
+            
+            <h2>WHY CHOOSE ALPHA?</h2>
+           
+            
+            <i class="fa-sharp fa-solid fa-square-check"></i>
+           <b> An exceptionally successful and personal</b> <br>
+          
+           <i class="fa-sharp fa-solid fa-square-check"></i>
+           <b>Competitive pricing</b><br>
+           <i class="fa-sharp fa-solid fa-square-check"></i>
+           <b>Organizing door-to-door solutions</b><br>
+           <i class="fa-sharp fa-solid fa-square-check"></i>
+           <b>Lower return costs as compared to forward charges</b><br>
+           <i class="fa-sharp fa-solid fa-square-check"></i>
+           <b>Taking care of the import duties and vat assistance</b><br>
+           <i class="fa-sharp fa-solid fa-square-check"></i>
+           <b>Arranging full tailor mate transport insurance</b><br>
+           <i class="fa-sharp fa-solid fa-square-check"></i>
+           <b>Providing storag</b><br>
+           <i class="fa-sharp fa-solid fa-square-check"></i>
+           <b>Effective order tracking via WhatsApp, SMS, and Email notifications</b><br>
+           <i class="fa-sharp fa-solid fa-square-check"></i>
+           <b>Maximum security coverage for lost shipments</b><br>
+           <img src="{% static 'images\ship23.jpg' %}" alt=""> 
+        </div>
+        <div class="contact-info">
+            <div class="card">
+                <h2>53M</h2>
+                <p>PRODUCTS DELIVERED</p>
+            </div>
+            <div class="card">
+                <h2>98,9%</h2>
+                <p>SUCCESS RATE</p>
+            </div>
+            <div class="card">
+                <h2>15K</h2>
+                <p>SATISFIED CLIENTS</p>
+            </div>
+            <div class="card">
+                <h2>346 M$</h2>
+                <p>WORTH OF CARGO TRANSPORTED</p>
+                
+            </div>
+    
+          </div> 
+       
+           <div class="info">
+            <h3>WHAT YOU CAN EXPECT FROM YOUR PERSONAL FREIGHT FORWARDER</h3>
+            <div class="info-1">
+            <i class="fa-solid fa-user"></i>
+            <b>PERSONAL TOUCH</b>
+            <p>As a global shipping company, ALPHA stands for quality, outstanding customer service, and a personal point of contact in over 100 countries.
+                 We’d be happy to go the extra mile to get your cargo to its destination as quickly and safely as possible</p>
+        
+        </div>
+        <div class="info-2">
+            <i class="fa-solid fa-users-line"></i>
+            <b>EXCEPTIONAL SERVICES</b>
+            <p >With almost three decades of experience in the industry, our extensive network and expertise guarantee your cargo’s safe and timely delivery to its destination. 
+                Trust us to handle all your shipping needs.</p>
+            
+        </div>
+              <div class="info-3">
+            <i class="fa-sharp fa-solid fa-hand-holding-dollar"></i>
+            <b>FLEXIBLE PRICING</b>
+            <p>We understand that every client has unique needs and requirements when it comes to freight forwarding.
+                 At ALPHA, we offer a variety of flexible fees that can be tailored to suit your specific needs.</p>
+        </div>
+            
+           
+            
+            
+
+           </div>
+        
+            <footer>
+                <div class="container">
+                    <div class="sec aboutus">
+                        <h2>About us</h2>
+                        <p>ALPHA—Cargo Shipping International Ltd. Is a forwarding company that began its logistics solutions in 1984.
+                            The company has since grown to a global scale, offering Ro/Ro solutions in India.
+                            
+                            </p>
+                            <ul class="sci">
+                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                            </ul>
+                    </div>
+                     <div class="sec quicklinks">
+                        <h2> SERVICES</h2>
+                        <ul>
+                            <li><a href="#"></a>Airframes</li>
+                            <li><a href="#"></a>Cargo</li>
+                            <li><a href="#">Webbing</a></li>
+                            <li><a href="#"></a>MRO</li>
+                        </ul>
+                     </div>
+                     <div class="sec quicklinks">
+                        <h2>INDUSTRIES</h2>
+                        <ul>
+                            <li><a href="#"></a>Automotive</li>
+                            <li><a href="#"></a>Engineering</li>
+                            <li><a href="#">Commodities</a></li>
+                            <li><a href="#"></a>E-commerce</li>
+                        </ul>
+                     </div>
+                     <div class="sec quicklinks">
+                        <h2>QUALITY</h2>
+                        <ul>
+                            <li><a href="#"></a>Quality Assurance</li>
+                            <li><a href="#"></a>Quality Certification</li>
+                            
+                        </ul>
+                     </div>
+                     <div class="sec quicklinks">
+                        <h2>COMPANY</h2>
+                        <ul>
+                            <li><a href="#"></a>Purpose & Vision</li>
+                            
+                            <li><a href="#"></a>Leadership Team</li>
+                            <li><a href="#"></a>Awards</li>
+                            <li><a href="#"></a>Media & News Room</li>
+                            
+                            
+                        </ul>
+                     </div>
+                     <div class="sec contact">
+                        <h2>Contact Us</h2>
+                        <ul class="fro">
+                            <li>
+                                <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                                <span>467 Silver Street<br>
+                                Trivandrum,Pin 60536,<br>INDIA</span>
+                            </li>
+                            <li>
+                                <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                                <p><a href="tel:+91 8084657216">+9123465</a><br>
+                                </p>
+                            </li>
+                            <li>
+                                <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                                <p><a href="mailto:alpha@gmail.com">alpha@gmail.com</a><br>
+                                </p>
+                            </li>
+                        </ul>
+                     </div>
+                     
+                </div>
+            </footer>  
+
+
+
+        
+    </div>
+</body>
+
+</html>

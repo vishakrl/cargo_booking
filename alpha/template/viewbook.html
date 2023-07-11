@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>booking-user</title>
+    
+<style>
+    body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #E3F0FF, gray);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .Cart-Container{
+    width: 80%;
+    height: 90%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 25px 40px #1687d933;
+    overflow-y: scroll;
+    }
+    .Header{
+    margin: auto;
+    width: 90%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    .Heading{
+    font-size: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 700;
+    color: #2F3841;
+    }
+    .Action{
+    font-size: 14px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    color: #E44C4C;
+    cursor: pointer;
+    border-bottom: 1px solid #E44C4C;
+    }
+    .Cart-Items{
+    margin: auto;
+    width: 95%;
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color:burlywood; */
+    border-radius: 20px;
+    }
+    .about{
+    height: 100%;
+    }
+    .title{
+    padding-top: 5px;
+    line-height: 10px;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 800;
+    color: #202020;
+    }
+    .subtitle{
+    line-height: 10px;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    color: #909090;
+    }
+    .subdetails{
+    line-height: 5px;
+    font-size: 13px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    color: #909090;
+    }
+    .prices{
+    height: 100%;
+    text-align: right;
+    }
+    .amount{
+    padding-top: 20px;
+    font-size: 26px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
+    color: #202020;
+    }
+    .proceed{
+    padding-top: 5px;
+    font-size: 14px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    color: #1687d9;
+    cursor: pointer;
+    }
+    .remove{
+    padding-top: 5px;
+    font-size: 14px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    color: #E44C4C;
+    cursor: pointer;
+    }
+
+</style>
+
+</head>
+<body>
+    
+    <div class="Cart-Container">
+        
+        <div class="Header">
+            <h3 class="Heading">Your Shipping items</h3>
+            <h5 class="Action"></h5>
+        </div>
+        <ol >
+            {% for i in c_details %}
+        <li><div class="Cart-Items">
+            <div class="about">
+            <h1 class="title">{{i.s_name}}</h1>
+            <h3 class="subtitle">{{i.r_name}}</h3>
+            <h3 class="subtitle">{{i.dst}}</h3>
+            <small class="subdetails">{{i.cargo_type}}</small><br>
+            <small class="subdetails">{{i.weight}} kg</small><br>
+            <small class="subdetails">{{i.date}}</small>  
+            </div>
+            
+            <div class="prices">
+                <div class="amount">₹{{i.price}}</div>
+                <div class="proceed"><u></u></div>
+            </div>
+        </div></li>  
+        {% endfor %}
+        
+    </ol>
+    </div>
+       
+</body>
+</html>

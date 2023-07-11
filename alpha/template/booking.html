@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bookin page for customer</title>
+<style>
+    body{
+            background-color: gray;
+        }
+        .main{
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            border-radius: 10px;
+            background-color: rgba(240, 248, 255, 0.805);
+            margin-top: 20px;
+            height:auto;
+        }
+        .main h1{
+            margin-left: 30px;
+            margin-top: 40px;
+            padding: 20px;
+        }
+        .pg-details{
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        .pg-details input{
+            padding: 5px;
+            margin-bottom: 20px;
+            margin-top: 7px;
+            width: 300px;
+            height: 25px;
+            border: none;
+            border-bottom: 2px solid black;
+            border-radius: 5px;
+        }
+        .pg-details select{
+            padding: 3px;
+            margin-top: 5px;
+            margin-bottom: 7px;
+        }
+        .pg-details button{
+            height: 30px;
+            width: 300px;
+            color: white;
+            background-color: rgb(212, 49, 49);
+            border: none;
+            border-bottom: 2px solid black;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+</style>
+
+</head>
+<body>
+    <div class="main">
+        <h1>Book Your Cargo</h1>
+        <div class="pg-details">
+            <form action="" method="post">
+                {% csrf_token %}
+             <!-- <label for="order">order number</label><br> -->
+             <!-- <input name="ordno" type="number" placeholder="Enter id" ><br> -->
+
+
+            <label for="sender">Name of Sender:</label><br>
+            <input name="sname" type="text" placeholder="Sender's Name" value="{{user.username}}"><br>
+
+            <label for="recipient">Name of Recipient :</label><br>
+            <input name="rname" type="text" placeholder="Recipient's Name"><br>
+            
+            <label for="Destination">Destination of shipment :</label><br>
+            <input name="dest" type="text" placeholder="destination"><br>
+            
+            
+            <label for="Address">Address of destination:</label><br>
+            <textarea name="address" id="" cols="50" rows="5" placeholder="Enter Address"></textarea>
+            
+            <br><label for="C_type">Cargo type:</label><br>
+            <select name="c_type" id="">
+                <option value="">--select Cargo type--</option>
+                <option value="International">International</option>
+                <option value="Domestic">Domestic</option>
+            </select><br>
+
+            <label for="weight">Weight of Parcel: </label><br>
+            <input type="text" name="weight" id="" placeholder="Enter weight">/kg <br>
+
+            
+            
+
+            <label for="date">Date: </label><br>
+            <input type="date" name="date" id=""><br>
+
+            
+            <label for="Ctno">Contact No:</label><br>
+            <input name="ctno" type="text" placeholder="Enter Contact Details"><br>
+
+            <button type="submit">Submit</button><br><br>
+            
+            
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>
